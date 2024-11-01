@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "Backend server",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "@codegenie/serverless-express": "^4.16.0",
+    "express": "^5"
+  },
+  "devDependencies": {
+    "@types/express": "^5"
+  }
+}

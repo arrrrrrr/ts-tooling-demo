@@ -3,15 +3,31 @@
   "version": "0.0.1",
   "description": "Backend server",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "exports": {
+    ".": "./src/index.mts",
+    "./package.json": "./package.json"
   },
-  "private": true,
+  "scripts": {
+    "start-server": "node --experimental-strip-types --experimental-transform-types --watch bin/startServer.mts",
+    "start-serverless": "node --experimental-strip-types --experimental-transform-types --watch bin/startServerless.mts",
+    "build": "run build:compile && cp package.json ./dist/",
+    "build:backend": "run build:prepare backend && run build && run build:finalise backend",
+    "verify:backend": "run format:check && run lint:check && run types:check"
+  },
   "dependencies": {
     "@codegenie/serverless-express": "^4.16.0",
-    "express": "^5"
+    "convict": "^6.2.4",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@local/monorepo": "workspace:^",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/convict": "^6",
+    "@types/cookie-parser": "^1",
+    "@types/cors": "^2",
     "@types/express": "^5"
   }
 }

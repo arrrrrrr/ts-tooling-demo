@@ -1,0 +1,15 @@
+{
+  "$schema": "tsconfig-5.7-beta.schema.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "${configDir}/dist",
+    "outDir": "${configDir}/dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  }
+}

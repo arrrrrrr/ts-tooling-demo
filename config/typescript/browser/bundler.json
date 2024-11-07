@@ -1,0 +1,17 @@
+{
+  "$schema": "../common/tsconfig-5.7-beta.schema.json",
+  "extends": [
+    "./defs/bundler.json",
+    "./defs/esnext.json"
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  }
+}

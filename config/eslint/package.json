@@ -1,0 +1,36 @@
+{
+  "name": "@local/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    "./config.mts": "./index.mts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "*.mts"
+  ],
+  "dependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vitest": "^0.5.4",
+    "typescript-eslint": "^8.12.2"
+  },
+  "devDependencies": {
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.13.0",
+    "jiti": "^2.4.0"
+  },
+  "peerDependencies": {
+    "eslint": "*",
+    "typescript": "*"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true
+}

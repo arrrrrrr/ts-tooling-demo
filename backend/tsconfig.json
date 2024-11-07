@@ -1,0 +1,14 @@
+{
+  "extends": "@local/tsconfig/node/es",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "types": ["vitest/globals"]
+  },
+  "include": [
+    "src",
+    "bin",
+    "./vitest.config.ts"
+  ]
+}

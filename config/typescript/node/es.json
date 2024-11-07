@@ -1,0 +1,16 @@
+{
+  "$schema": "../common/tsconfig-5.7-beta.schema.json",
+  "extends": [
+    "../common/base.json"
+  ],
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "es2023",
+    "lib": [
+      "ESNext"
+    ],
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true
+  }
+}

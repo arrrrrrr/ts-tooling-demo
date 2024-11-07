@@ -1,16 +1,36 @@
 {
-  "name": "express-demo",
+  "name": "@local/monorepo",
   "type": "module",
   "packageManager": "yarn@4.5.1",
+  "engines": {
+    "node": ">=22."
+  },
   "workspaces": [
+    "config/*",
     "backend"
   ],
+  "exports": {
+    "./*": "./*"
+  },
   "devDependencies": {
+    "@local/eslint-config": "workspace:^",
     "@types/node": "^22",
     "eslint": "^9.13.0",
+    "prettier": "^3.3.3",
     "tsx": "^4.19.2",
     "typescript": "5.7.0-beta",
-    "typescript-eslint": "^8.12.2",
     "vitest": "^2.1.4"
+  },
+  "scripts": {
+    "test:unit": "cd $INIT_CWD && vitest run",
+    "test:coverage": "run test:unit --coverage",
+    "types:check": "cd $INIT_CWD && tsc -noEmit -p .",
+    "format:check": "prettier --config \"$PROJECT_CWD/prettier.config.mjs\" --check .",
+    "format:write": "prettier --config \"$PROJECT_CWD/prettier.config.mjs\" --write .",
+    "lint:check": "eslint --flag unstable_ts_config --config eslint.config.mts .",
+    "lint:write": "eslint --flag unstable_ts_config --config \"$PROJECT_CWD/eslint.config.mts\" --fix .",
+    "build:compile": "cd $INIT_CWD && tsc -p ./tsconfig.build.json",
+    "build:prepare": "rm -rf \"$PROJECT_CWD/dist/$0\" && mkdir -p \"$PROJECT_CWD/dist/$0\"",
+    "build:finalise": " mv -f \"$INIT_CWD/dist\" \"$PROJECT_CWD/dist/$0\""
   }
 }

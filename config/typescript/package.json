@@ -1,0 +1,19 @@
+{
+  "name": "@local/tsconfig",
+  "version": "1.0.0",
+  "description": "Typescript config templates",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    "./browser/bundler": "./browser/bundler.json",
+    "./node/es": "./node/es.json",
+    "./node/cjs": "./node/cjs.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "node/*.json",
+    "browser/*.json"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../common/tsconfig-5.7-beta.schema.json",
+  "extends": [
+    "../common/base.json",
+    "./extensions/es2024.json"
+  ],
+  "compilerOptions": {
+    "target": "es2024",
+    "lib": [
+      "ES2024"
+    ],
+    "module": "CommonJS",
+    "moduleResolution": "Node"
+  }
+}
